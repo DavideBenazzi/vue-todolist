@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>vue-todolist</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header>
+          <h1>ToDo</h1>
+          <div class="">
+            <input type="text" placeholder="annota qui">
+            <button type="button">inserisci</button>
+          </div>
+        </header>
+        <main>
+          <ul>
+            <li v-for='(todo , index) in todoList'>{{ todoList[index] }}</li>
+          </ul>
+        </main>
+      </div>
+
+
+
+    </div>
+    <!-- JAVASCRIPT -->
+    <script src="./js/main.js" charset="utf-8"></script>
+  </body>
+</html>
