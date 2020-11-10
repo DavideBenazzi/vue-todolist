@@ -24,7 +24,7 @@
 
         <main>
           <ul>
-            <template v-if='endList'>
+            <template v-if="endList">
               <li v-for='(todo , index) in todoList'>
                 {{ todoList[index] }}
                 <i class="fas fa-times" @click='remove(index)'></i>

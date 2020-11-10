@@ -10,23 +10,22 @@ const app = new Vue ({
     message: '',
     endList: true,
   },
-  created() {
-    setInterval( this.controlList() , 1000 );
-  },
   methods: {
     submit() {
+      this.endList = true;
       this.todoList.push(this.message);
       this.message = '';
     },
     remove(index) {
       this.todoList.splice(index , 1);
-      // this.controlList();
+      this.controlList();
     },
     controlList() {
       if (this.todoList.length === 0) {
         this.endList = false;
+      } else {
+        this.endList = true;
       }
-      this.endList = true;
     },
   },
 });
