@@ -24,7 +24,7 @@
           <ul>
             <li v-for='(todo , index) in todoList'>
               {{ todoList[index] }}
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times" @click='remove(index)'></i>
             </li>
           </ul>
         </main>

@@ -14,5 +14,8 @@ const app = new Vue ({
       this.todoList.push(this.message);
       this.message = '';
     },
+    remove(index) {
+      this.todoList.splice(index , 1);
+    },
   },
 });
