@@ -2,31 +2,95 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Satisfy', cursive;
 }
 
 .container {
+  display: flex;
   max-width: 1170px;
   margin: 0 auto;
 }
-
-.container header {
-  display: flex;
-  flex-direction: column;
+/* AGENDA */
+.container .agenda {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+/* LEFT */
+.container .left {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 0;
+  text-align: center;
 }
 
-.container h1 {
-  margin-bottom: 30px;
-  align-self: center;
+.container .left h1 {
+  font-size: 40px;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+/* POSTIT */
+.container .left .postit {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  right: 5%;
+  top: 35%;
 }
 
-.container .enterData {
-  display: flex;
-  align-self: center;
-  margin-bottom: 30px;
+.container .left .postit img {
+  height: 100%;
+  width: 100%;
+}
+/* INPUT */
+.container input {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  font-size: 25px;
+  height: 35px;
+  width: 200px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+/* BUTTON */
+.container button {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+}
+/* RIGHT */
+.container .right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }
 
-main ul li {
+.container .right ul {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.container .right ul li {
+  font-size: 20px;
+  width: 200px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  margin: 15px;
+}
+/* MEDIAQUERY */
+/* IPAD */
+@media screen and (max-width: 768px) {
+
+}
+/* MOBILE */
+@media screen and (max-width: 640px) {
+
 }

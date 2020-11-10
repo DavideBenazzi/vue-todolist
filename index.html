@@ -2,6 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- VIEWPORT PER MEDIAQUERY -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <!-- CSS -->
@@ -14,27 +18,32 @@
   <body>
     <div id="app">
       <div class="container">
-        <header>
-          <h1>ToDo</h1>
-          <div class="enterData">
-            <input @keyup.enter="submit" type="text" v-model='message'>
-            <button @click='submit' type="button">inserisci</button>
+        <!-- AGENDA -->
+        <img src="./img/agenda.png" alt="agenda" class='agenda'>
+        <!-- SECTION LEFT -->
+        <section class="left">
+          <h1>To do notebook</h1>
+          <!-- POSTIT -->
+          <div class="postit">
+            <img src="./img/post_it.png" alt="post-it">
+            <input @keyup.enter="submit" type="text" placeholder='First thing to do...' v-model='message'>
+            <button @click='submit' type="button">Submit</button>
           </div>
-        </header>
-
-        <main>
+        </section>
+        <!-- SECTION RIGHT -->
+        <section class="right">
           <ul>
             <template v-if="endList">
               <li v-for='(todo , index) in todoList'>
                 {{ todoList[index] }}
-                <i class="fas fa-times" @click='remove(index)'></i>
+                <i class="fas fa-check" @click='remove(index)'></i>
               </li>
             </template>
             <template v-else>
-              <li>Nothing to do</li>
+              <li>Nothing to do...</li>
             </template>
           </ul>
-        </main>
+        </section>
       </div>
     </div>
 
