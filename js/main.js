@@ -8,6 +8,10 @@ const app = new Vue ({
       'Fare il bucato',
     ],
     message: '',
+    endList: true,
+  },
+  created() {
+    setInterval( this.controlList() , 1000 );
   },
   methods: {
     submit() {
@@ -16,6 +20,13 @@ const app = new Vue ({
     },
     remove(index) {
       this.todoList.splice(index , 1);
+      // this.controlList();
+    },
+    controlList() {
+      if (this.todoList.length === 0) {
+        this.endList = false;
+      }
+      this.endList = true;
     },
   },
 });

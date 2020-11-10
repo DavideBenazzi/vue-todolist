@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>vue-todolist</title>
   </head>
+
   <body>
     <div id="app">
       <div class="container">
@@ -20,19 +21,23 @@
             <button @click='submit' type="button">inserisci</button>
           </div>
         </header>
+
         <main>
           <ul>
-            <li v-for='(todo , index) in todoList'>
-              {{ todoList[index] }}
-              <i class="fas fa-times" @click='remove(index)'></i>
-            </li>
+            <template v-if='endList'>
+              <li v-for='(todo , index) in todoList'>
+                {{ todoList[index] }}
+                <i class="fas fa-times" @click='remove(index)'></i>
+              </li>
+            </template>
+            <template v-else>
+              <li>Nothing to do</li>
+            </template>
           </ul>
         </main>
       </div>
-
-
-
     </div>
+
     <!-- JAVASCRIPT -->
     <script src="./js/main.js" charset="utf-8"></script>
   </body>
