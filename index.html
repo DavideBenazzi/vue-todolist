@@ -16,13 +16,16 @@
         <header>
           <h1>ToDo</h1>
           <div class="">
-            <input type="text" placeholder="annota qui">
-            <button type="button">inserisci</button>
+            <input @keyup.enter="submit" type="text" v-model='message'>
+            <button @click='submit' type="button">inserisci</button>
           </div>
         </header>
         <main>
           <ul>
-            <li v-for='(todo , index) in todoList'>{{ todoList[index] }}</li>
+            <li v-for='(todo , index) in todoList'>
+              {{ todoList[index] }}
+              <i class="fas fa-times"></i>
+            </li>
           </ul>
         </main>
       </div>

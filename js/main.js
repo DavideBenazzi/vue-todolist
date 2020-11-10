@@ -7,5 +7,12 @@ const app = new Vue ({
       'Fare l\'esercizio',
       'Fare il bucato',
     ],
+    message: '',
+  },
+  methods: {
+    submit() {
+      this.todoList.push(this.message);
+      this.message = '';
+    },
   },
 });
