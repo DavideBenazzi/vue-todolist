@@ -12,9 +12,11 @@ const app = new Vue ({
   },
   methods: {
     submit() {
-      this.endList = true;
-      this.todoList.push(this.message);
-      this.message = '';
+      if (this.message.length !== 0) {
+        this.endList = true;
+        this.todoList.push(this.message);
+        this.message = '';
+      };
     },
     remove(index) {
       this.todoList.splice(index , 1);
@@ -25,7 +27,7 @@ const app = new Vue ({
         this.endList = false;
       } else {
         this.endList = true;
-      }
+      };
     },
   },
 });

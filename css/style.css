@@ -9,6 +9,24 @@
   margin: 0 auto;
 }
 
+.container header {
+  display: flex;
+  flex-direction: column;
+}
+
 .container h1 {
   margin-bottom: 30px;
+  align-self: center;
+}
+
+.container .enterData {
+  display: flex;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+main ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
 }
