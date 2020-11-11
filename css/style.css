@@ -5,9 +5,15 @@
   font-family: 'Satisfy', cursive;
 }
 
+body {
+  background: #001233;
+  color: #432818;
+}
+
 .container {
   display: flex;
   max-width: 1170px;
+  max-height: 100vh;
   margin: 0 auto;
 }
 /* AGENDA */
@@ -57,11 +63,25 @@
   outline: none;
   background: transparent;
 }
+
+.container input:hover,
+.container input:focus {
+  box-shadow: 5px 5px 5px rgba(0,0,0, 0.7);
+}
 /* BUTTON */
 .container button {
   position: absolute;
   top: 50%;
   right: 5%;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+.container button:hover {
+  transform: scale(1.5);
 }
 /* RIGHT */
 .container .right {
@@ -85,12 +105,65 @@
   display: flex;
   justify-content: space-between;
 }
+
+.container .right ul li i {
+  cursor: pointer;
+}
+
+.container .right ul li i:hover {
+  transform: scale(1.5);
+}
+
 /* MEDIAQUERY */
 /* IPAD */
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 800px) {
+  .container .agenda {
+    height: 80%;
+  }
+  .container .left h1 {
+    font-size: 30px;
+    top: 10%;
+  }
+  .container .left .postit {
+    width: 180px;
+    height: 180px;
+    top: 20%;
+  }
+  .container input {
+    font-size: 20px;
+    width: 150px;
+  }
+  .container .right ul li {
+    font-size: 16px;
+    width: 150px;
+  }
+  .container .right ul {
+    top: 12%;
+  }
 }
 /* MOBILE */
 @media screen and (max-width: 640px) {
-
+  .container .left h1 {
+    font-size: 20px;
+  }
+  .container .left .postit {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+  }
+  .container input {
+    font-size: 10px;
+    width: 100px;
+  }
+  .container button {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .container .right ul li {
+    font-size: 12px;
+    width: 100px;
+  }
+  .container .right ul {
+    top: 10%;
+  }
 }

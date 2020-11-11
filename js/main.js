@@ -12,7 +12,7 @@ const app = new Vue ({
   },
   methods: {
     submit() {
-      if (this.message.length !== 0) {
+      if (this.message.trim() !== '') {
         this.endList = true;
         this.todoList.push(this.message);
         this.message = '';
